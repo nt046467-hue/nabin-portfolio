@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || "https://nabin-portfolio.vercel.app"
+    process.env.NEXT_PUBLIC_BASE_URL || "https://nabin-portfolio.vercel.app",
   ),
   title: "Nabin Thapa | Full-Stack Developer Nepal | Next.js & AI",
   description:
@@ -42,14 +42,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Nabin Thapa" }],
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/favicon.svg" }],
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/favicon.png" }],
   },
   openGraph: {
     title: "Nabin Thapa | Full-Stack Developer Nepal",
     description:
       "Nepal-based full-stack developer specializing in Next.js, React, Firebase, and AI API integration. Available for freelance projects globally.",
-    url: process.env.NEXT_PUBLIC_BASE_URL || "https://nabin-portfolio.vercel.app",
+    url:
+      process.env.NEXT_PUBLIC_BASE_URL || "https://nabin-portfolio.vercel.app",
     siteName: "Nabin Thapa Portfolio",
     type: "website",
     locale: "en_US",
@@ -90,7 +91,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Nabin Thapa",
-              url: process.env.NEXT_PUBLIC_BASE_URL || "https://nabin-portfolio.vercel.app",
+              url:
+                process.env.NEXT_PUBLIC_BASE_URL ||
+                "https://nabin-portfolio.vercel.app",
               jobTitle: "Full-Stack Developer",
               email: "nt046467@gmail.com",
               address: {
