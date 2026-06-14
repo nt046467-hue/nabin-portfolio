@@ -7,7 +7,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: "LinkedIn",
-    href: "www.linkedin.com/in/nabin-thapa-226903382",
+    href: "https://www.linkedin.com/in/nabin-thapa-226903382",
     iconSlug: "linkedin",
   },
   {
