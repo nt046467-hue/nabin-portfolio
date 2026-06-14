@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useCallback } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
-import { Github, Linkedin, ChevronDown, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { FiverrIcon, FreelancerIcon } from '@/components/ui/brand-icons';
-import { SOCIAL_LINKS } from '@/lib/constants';
+import { useState, useEffect, useCallback } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { Github, Linkedin, ChevronDown, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { FiverrIcon, FreelancerIcon } from "@/components/ui/brand-icons";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   github: Github,
@@ -20,14 +20,14 @@ const socialLinksWithIcons = SOCIAL_LINKS.map((link) => ({
 }));
 
 const ROLES = [
-  'Full-Stack Developer',
-  'Next.js Developer',
-  'AI Integration Specialist',
+  "Full-Stack Developer",
+  "Next.js Developer",
+  "AI Integration Specialist",
 ];
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
@@ -52,14 +52,14 @@ export default function Hero() {
           }
         }
       },
-      isDeleting ? 40 : 80
+      isDeleting ? 40 : 80,
     );
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, roleIndex]);
 
   const scrollToSection = useCallback((id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   const containerVariants = {
@@ -80,7 +80,7 @@ export default function Hero() {
       y: 0,
       transition: {
         duration: prefersReducedMotion ? 0 : 0.6,
-        ease: 'easeOut',
+        ease: "easeOut",
       },
     },
   };
@@ -89,14 +89,14 @@ export default function Hero() {
     <section
       id="hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
-      style={{ paddingTop: '5rem' }}
+      style={{ paddingTop: "5rem" }}
     >
       {/* Background gradient */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse at 50% 30%, rgba(233, 69, 96, 0.1) 0%, transparent 50%), linear-gradient(180deg, #1A1A2E 0%, #16213E 100%)',
+            "radial-gradient(ellipse at 50% 30%, rgba(233, 69, 96, 0.1) 0%, transparent 50%), linear-gradient(180deg, #1A1A2E 0%, #16213E 100%)",
         }}
       />
 
@@ -105,8 +105,8 @@ export default function Hero() {
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
+            "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
         }}
       />
 
@@ -125,16 +125,16 @@ export default function Hero() {
               className="absolute inset-0 rounded-full blur-2xl opacity-50"
               style={{
                 background:
-                  'radial-gradient(circle, rgba(233, 69, 96, 0.5) 0%, transparent 70%)',
-                transform: 'scale(1.3)',
+                  "radial-gradient(circle, rgba(233, 69, 96, 0.5) 0%, transparent 70%)",
+                transform: "scale(1.3)",
               }}
             />
             {/* Photo container */}
             <div
               className="relative rounded-full border-4 border-accent overflow-hidden shadow-2xl shadow-accent/30"
               style={{
-                width: 'clamp(140px, 35vw, 220px)',
-                height: 'clamp(140px, 35vw, 220px)',
+                width: "clamp(140px, 35vw, 220px)",
+                height: "clamp(140px, 35vw, 220px)",
               }}
             >
               <img
@@ -179,14 +179,14 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto max-w-md sm:max-w-none"
         >
           <Button
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection("contact")}
             className="bg-accent hover:bg-accent-hover text-white rounded-lg px-7 sm:px-8 py-3.5 h-auto text-sm sm:text-base font-semibold shadow-lg shadow-accent/30 transition-all duration-200 hover:shadow-accent/50 hover:scale-105 w-full sm:w-auto"
           >
             Hire Me
           </Button>
           <Button
             variant="outline"
-            onClick={() => scrollToSection('projects')}
+            onClick={() => scrollToSection("projects")}
             className="border-2 border-accent text-accent hover:bg-accent/10 rounded-lg px-7 sm:px-8 py-3.5 h-auto text-sm sm:text-base font-semibold transition-all duration-200 hover:scale-105 w-full sm:w-auto"
           >
             View My Work
@@ -221,7 +221,7 @@ export default function Hero() {
         className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2"
       >
         <button
-          onClick={() => scrollToSection('skills')}
+          onClick={() => scrollToSection("skills")}
           className="flex flex-col items-center gap-1 text-text-secondary hover:text-accent transition-colors"
           aria-label="Scroll down"
         >
